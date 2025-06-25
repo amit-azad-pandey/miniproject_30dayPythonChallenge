@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 30px auto; }
+        form { display: flex; flex-direction: column; }
+        input, select, button { margin-bottom: 15px; padding: 8px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+    <form action="/add_expense" method="post">
+        <label>Salary (Rs):</label>
+        <input type="number" name="salary" step="0.01" required>
+
+        <label>Category:</label>
+        <input type="text" name="category" required>
+
+        <label>Amount (Rs):</label>
+        <input type="number" name="amount" step="0.01" required>
+
+        <label>Description:</label>
+        <input type="text" name="description">
+
+        <label>Paid Via:</label>
+        <select name="paid_via" required>
+            <option value="UPI">UPI</option>
+            <option value="Cash">Cash</option>
+            <option value="Card">Card</option>
+        </select>
+
+        <button type="submit">Add Expense</button>
+    </form>
+</body>
+</html>
